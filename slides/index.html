@@ -1,0 +1,668 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Внутриклеточное пищеварение у Arenicola marina</title>
+  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;500;600;700&family=IBM+Plex+Serif:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reveal.js@5.1.0/dist/reveal.css">
+  <link rel="stylesheet" href="style.css?v=20260315m">
+</head>
+<body>
+  <div class="reveal">
+    <div class="slides">
+
+      <!-- ══════ SLIDE 0: TITLE ══════ -->
+      <section id="title" data-background-color="#0b1a2e">
+        <div class="slide-inner title-layout">
+          <div class="hero-photo">
+            <img src="assets/coelomocyte-confocal.jpg" alt="Целомоциты — конфокальная микроскопия">
+          </div>
+          <div class="title-text">
+            <p class="kicker">Незакрытый вопрос клеточной биологии</p>
+            <h1>Внутриклеточное<br>пищеварение у<br><span class="gold"><em>Arenicola marina</em></span></h1>
+            <p class="subtitle">Пять статей. Одна диссертация. 43 года без повторной проверки.</p>
+          </div>
+        </div>
+      </section>
+
+      <!-- ══════ SLIDE 1: KAGANOVSKAYA ══════ -->
+      <section id="question" data-background-color="#f4efe5">
+        <div class="slide-inner pub-slide">
+          <!-- TOP: photo banner -->
+          <div class="pub-banner">
+            <figure class="pub-banner-photo">
+              <img src="assets/peterhof-bio.jpg" alt="Биологический институт в Старом Петергофе">
+              <figcaption>Биологический институт ЛГУ, Старый Петергоф</figcaption>
+            </figure>
+            <figure class="pub-banner-photo">
+              <img src="assets/lgu-main.jpg" alt="Здание Двенадцати коллегий, ЛГУ">
+              <figcaption>Здание Двенадцати коллегий — главный корпус ЛГУ</figcaption>
+            </figure>
+          </div>
+          <!-- BOTTOM: supervisor + publications -->
+          <div class="pub-bottom">
+            <!-- LEFT: supervisor card -->
+            <div class="pub-supervisor-col">
+              <div class="pub-supervisor">
+                <img src="assets/zavarzin.jpg" alt="Проф. А.А. Заварзин" class="pub-portrait">
+                <div>
+                  <strong>Научный руководитель</strong>
+                  <p>Проф. А.А. Заварзин (мл.)</p>
+                  <p class="pub-dept">Зав. кафедрой цитологии и гистологии ЛГУ, 1968&ndash;1993</p>
+                </div>
+              </div>
+            </div>
+            <!-- RIGHT: publications list -->
+            <div class="pub-right">
+              <h2 class="dark-text">Работы Е.А. Кагановской</h2>
+              <p class="q-lead dark-text">Кафедра цитологии и гистологии, Биологический факультет ЛГУ</p>
+              <div class="pub-timeline">
+                <div class="pub-item pub-reveal" style="--i:0">
+                  <span class="pub-year">1976</span>
+                  <div>
+                    <strong>Кинетика клеточного обновления и дифференцировки в кишечном эпителии</strong>
+                    <span class="pub-journal">Цитология, 18(2): 171-177</span>
+                  </div>
+                </div>
+                <div class="pub-item pub-reveal" style="--i:1">
+                  <span class="pub-year">1978</span>
+                  <div>
+                    <strong>Электронно-микроскопическое исследование ресничных и абсорбтивных клеток</strong>
+                    <span class="pub-journal">Цитология, 20: 882-890</span>
+                  </div>
+                </div>
+                <div class="pub-item pub-reveal" style="--i:2">
+                  <span class="pub-year">1978</span>
+                  <div>
+                    <strong>Ультраструктура железистых зон абсорбции в желудочном эпителии</strong>
+                    <span class="pub-journal">Труды Петергофского биол. ин-та ЛГУ, 26: 86-103</span>
+                  </div>
+                </div>
+                <div class="pub-item pub-reveal" style="--i:3">
+                  <span class="pub-year">1988</span>
+                  <div>
+                    <strong>Ультраструктура базальных клеток желудка и средней кишки</strong>
+                    <span class="pub-journal">Цитология, 30: 891-894</span>
+                  </div>
+                </div>
+                <div class="pub-item pub-reveal" style="--i:4">
+                  <span class="pub-year">1989</span>
+                  <div>
+                    <strong>Морфофункциональные особенности пищеварительной системы полихет</strong>
+                    <span class="pub-journal">Архив анат., гистол. и эмбриол., 96(4): 84-92</span>
+                  </div>
+                </div>
+                <div class="pub-gap pub-reveal" style="--i:5">
+                  <span class="pub-gap-line"></span>
+                  <span class="pub-gap-label">37 лет&hellip; никто не вернулся к вопросу</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ══════ SLIDE 2: ANIMAL ══════ -->
+      <section id="animal" data-background-image="assets/arenicola-closeup.jpg" data-background-size="cover" data-background-position="center">
+        <div class="photo-overlay"></div>
+        <div class="slide-inner animal-layout">
+          <h2><em>Arenicola marina</em></h2>
+          <p class="animal-sub">Пескожил. Ключевой биотурбатор приливной зоны Палеарктики.</p>
+          <div class="animal-facts">
+            <div class="animal-fact">
+              <strong>Детритофагия</strong>
+              <p>Заглатывает осадок, извлекает тонкую фракцию органики через специализированный кишечный эпителий</p>
+            </div>
+            <div class="animal-fact">
+              <strong>Целомоциты</strong>
+              <p>Свободные клетки целомической полости, проникающие в эпителий и фагоцитирующие пищевые частицы</p>
+            </div>
+            <div class="animal-fact">
+              <strong>Открытый вопрос</strong>
+              <p>Какая доля переваривания происходит внеклеточно в просвете, а какая внутриклеточно в фаголизосомах?</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ══════ SLIDE 3: MODEL — FULL-WIDTH INTERACTIVE ══════ -->
+      <section id="model" data-background-color="#f4efe5">
+        <div class="slide-inner model-layout">
+          <div class="model-header">
+            <h2 class="dark-text">Модель: гипотеза Кагановской, 1983</h2>
+            <div class="model-steps">
+              <button class="m-step m-step-1 active" data-step="1" aria-pressed="true">1 &middot; Субстрат</button>
+              <button class="m-step m-step-2" data-step="2" aria-pressed="false">2 &middot; Контакт</button>
+              <button class="m-step m-step-3" data-step="3" aria-pressed="false">3 &middot; Фагоцитоз</button>
+              <button class="m-step m-step-4" data-step="4" aria-pressed="false">4 &middot; Лизис</button>
+            </div>
+          </div>
+          <!-- hidden fragments for arrow-key navigation -->
+          <span class="fragment model-frag" data-fragment-index="0" data-model-step="2"></span>
+          <span class="fragment model-frag" data-fragment-index="1" data-model-step="3"></span>
+          <span class="fragment model-frag" data-fragment-index="2" data-model-step="4"></span>
+          <div class="model-body">
+            <svg viewBox="0 0 960 440" class="epi-svg" aria-label="Схема внутриклеточного пищеварения">
+              <defs>
+                <linearGradient id="lumenGrad" x1="0" y1="0" x2="0" y2="1">
+                  <stop offset="0%" stop-color="#efe5d0"/>
+                  <stop offset="100%" stop-color="#e8dcc4"/>
+                </linearGradient>
+                <linearGradient id="coelGrad" x1="0" y1="0" x2="0" y2="1">
+                  <stop offset="0%" stop-color="#f0e8d8"/>
+                  <stop offset="100%" stop-color="#ece2d0"/>
+                </linearGradient>
+                <radialGradient id="nucGrad" cx="42%" cy="40%" r="55%">
+                  <stop offset="0%" stop-color="#d8c8f0"/>
+                  <stop offset="100%" stop-color="#9b80c8"/>
+                </radialGradient>
+                <radialGradient id="cellGrad" cx="50%" cy="30%" r="70%">
+                  <stop offset="0%" stop-color="#f0e8d8"/>
+                  <stop offset="100%" stop-color="#ddd0b8"/>
+                </radialGradient>
+                <radialGradient id="amoebGrad" cx="40%" cy="35%" r="60%">
+                  <stop offset="0%" stop-color="#fff0d8"/>
+                  <stop offset="100%" stop-color="#e0c8a0"/>
+                </radialGradient>
+                <!-- spotlight filter -->
+                <filter id="spotGlow" x="-30%" y="-30%" width="160%" height="160%">
+                  <feGaussianBlur stdDeviation="8" result="blur"/>
+                  <feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge>
+                </filter>
+                <!-- arrow markers -->
+                <marker id="arrGold" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+                  <path d="M0,0 L10,5 L0,10 Z" fill="#c4a060"/>
+                </marker>
+                <marker id="arrTeal" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+                  <path d="M0,0 L10,5 L0,10 Z" fill="#2a9a7a"/>
+                </marker>
+                <marker id="arrPurple" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+                  <path d="M0,0 L10,5 L0,10 Z" fill="#7b5ea7"/>
+                </marker>
+                <marker id="arrRed" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+                  <path d="M0,0 L10,5 L0,10 Z" fill="#c06060"/>
+                </marker>
+              </defs>
+              <!-- background -->
+              <rect x="0" y="0" width="960" height="440" fill="#f4efe5" rx="12"/>
+
+              <!-- ═══ ZONE LABELS ═══ -->
+              <text x="14" y="40" font-size="11" fill="#a08b6d" font-family="IBM Plex Sans" font-weight="700" letter-spacing="0.08em">ПРОСВЕТ</text>
+              <text x="14" y="168" font-size="11" fill="#8b7355" font-family="IBM Plex Sans" font-weight="700" letter-spacing="0.08em">ЭПИТЕЛИЙ</text>
+              <text x="14" y="340" font-size="11" fill="#a08b6d" font-family="IBM Plex Sans" font-weight="700" letter-spacing="0.08em">ЦЕЛОМ</text>
+
+              <!-- ═══ ZONE 1: LUMEN ═══ -->
+              <g class="zone zone-lumen">
+                <rect x="80" y="10" width="860" height="65" rx="8" fill="url(#lumenGrad)" stroke="#c4a880" stroke-width="1" class="lumen-band"/>
+                <text x="510" y="36" text-anchor="middle" font-size="13" fill="#8b7355" font-family="IBM Plex Sans" font-weight="500">осадок + органический детрит + бактерии</text>
+                <!-- food particles -->
+                <circle cx="160" cy="48" r="9" fill="#c4a060" opacity="0.8" class="food-dot food-1"/>
+                <circle cx="260" cy="38" r="7" fill="#b8946a" opacity="0.7" class="food-dot food-2"/>
+                <circle cx="380" cy="52" r="8" fill="#d4b078" opacity="0.7" class="food-dot food-3"/>
+                <circle cx="510" cy="40" r="6" fill="#a88850" opacity="0.7" class="food-dot food-4"/>
+                <circle cx="640" cy="50" r="9" fill="#c4a060" opacity="0.7" class="food-dot food-5"/>
+                <circle cx="780" cy="42" r="7" fill="#d4b078" opacity="0.6" class="food-dot food-6"/>
+                <circle cx="880" cy="55" r="8" fill="#b8946a" opacity="0.6" class="food-dot food-7"/>
+                <!-- step 1 arrows: food flowing down -->
+                <path d="M160,57 L160,78" fill="none" stroke="#c4a060" stroke-width="3" marker-end="url(#arrGold)" opacity="0" class="sarr sarr-1"/>
+                <path d="M380,60 L380,78" fill="none" stroke="#c4a060" stroke-width="3" marker-end="url(#arrGold)" opacity="0" class="sarr sarr-1"/>
+                <path d="M640,58 L640,78" fill="none" stroke="#c4a060" stroke-width="3" marker-end="url(#arrGold)" opacity="0" class="sarr sarr-1"/>
+              </g>
+
+              <!-- ═══ BRUSH BORDER ═══ -->
+              <line x1="80" y1="85" x2="940" y2="85" stroke="#8b7355" stroke-width="2"/>
+              <g opacity="0.55" stroke="#8b7355" stroke-width="1.2">
+                <line x1="110" y1="75" x2="110" y2="85"/><line x1="120" y1="75" x2="120" y2="85"/>
+                <line x1="130" y1="75" x2="130" y2="85"/><line x1="140" y1="75" x2="140" y2="85"/>
+                <line x1="150" y1="75" x2="150" y2="85"/><line x1="160" y1="75" x2="160" y2="85"/>
+                <line x1="170" y1="75" x2="170" y2="85"/><line x1="180" y1="75" x2="180" y2="85"/>
+                <line x1="240" y1="75" x2="240" y2="85"/><line x1="250" y1="75" x2="250" y2="85"/>
+                <line x1="260" y1="75" x2="260" y2="85"/><line x1="270" y1="75" x2="270" y2="85"/>
+                <line x1="280" y1="75" x2="280" y2="85"/><line x1="290" y1="75" x2="290" y2="85"/>
+                <line x1="400" y1="75" x2="400" y2="85"/><line x1="410" y1="75" x2="410" y2="85"/>
+                <line x1="420" y1="75" x2="420" y2="85"/><line x1="430" y1="75" x2="430" y2="85"/>
+                <line x1="440" y1="75" x2="440" y2="85"/><line x1="450" y1="75" x2="450" y2="85"/>
+                <line x1="540" y1="75" x2="540" y2="85"/><line x1="550" y1="75" x2="550" y2="85"/>
+                <line x1="560" y1="75" x2="560" y2="85"/><line x1="570" y1="75" x2="570" y2="85"/>
+                <line x1="580" y1="75" x2="580" y2="85"/><line x1="590" y1="75" x2="590" y2="85"/>
+                <line x1="680" y1="75" x2="680" y2="85"/><line x1="690" y1="75" x2="690" y2="85"/>
+                <line x1="700" y1="75" x2="700" y2="85"/><line x1="710" y1="75" x2="710" y2="85"/>
+                <line x1="720" y1="75" x2="720" y2="85"/>
+                <line x1="820" y1="75" x2="820" y2="85"/><line x1="830" y1="75" x2="830" y2="85"/>
+                <line x1="840" y1="75" x2="840" y2="85"/><line x1="850" y1="75" x2="850" y2="85"/>
+              </g>
+
+              <!-- ═══ ZONE 2: EPITHELIUM ═══ -->
+              <g class="zone zone-epi">
+                <!-- Enterocyte A (primary — used for step 2 contact) -->
+                <g class="enterocyte-group enterocyte-a-group">
+                  <rect x="90" y="90" width="120" height="170" rx="6" fill="url(#cellGrad)" stroke="#8b7355" stroke-width="1.5" class="enterocyte enterocyte-a"/>
+                  <ellipse cx="150" cy="220" rx="22" ry="18" fill="url(#nucGrad)" stroke="#7b5ea7" stroke-width="1" opacity="0.8"/>
+                  <circle cx="145" cy="214" r="7" fill="#5a3d7a" opacity="0.35"/>
+                  <text x="150" y="118" text-anchor="middle" font-size="13" fill="#6b5a3e" font-family="IBM Plex Sans" font-weight="600">Энтероцит</text>
+                  <!-- apical vesicles (endocytosis detail) -->
+                  <circle cx="130" cy="105" r="4" fill="none" stroke="#2a9a7a" stroke-width="1" opacity="0"/>
+                  <circle cx="150" cy="100" r="3.5" fill="none" stroke="#2a9a7a" stroke-width="1" opacity="0"/>
+                  <circle cx="170" cy="105" r="4" fill="none" stroke="#2a9a7a" stroke-width="1" opacity="0"/>
+                  <!-- contact halo -->
+                  <circle cx="150" cy="95" r="50" fill="none" stroke="#2a9a7a" stroke-width="0" opacity="0" class="contact-halo"/>
+                  <!-- step 2 arrows -->
+                  <path d="M130,78 L130,100" fill="none" stroke="#2a9a7a" stroke-width="3" marker-end="url(#arrTeal)" opacity="0" class="sarr sarr-2"/>
+                  <path d="M170,78 L170,100" fill="none" stroke="#2a9a7a" stroke-width="3" marker-end="url(#arrTeal)" opacity="0" class="sarr sarr-2"/>
+                </g>
+
+                <!-- Enterocyte B -->
+                <g class="enterocyte-group">
+                  <rect x="220" y="90" width="120" height="170" rx="6" fill="url(#cellGrad)" stroke="#8b7355" stroke-width="1.5" class="enterocyte enterocyte-b"/>
+                  <ellipse cx="280" cy="220" rx="22" ry="18" fill="url(#nucGrad)" stroke="#7b5ea7" stroke-width="1" opacity="0.8"/>
+                  <text x="280" y="118" text-anchor="middle" font-size="13" fill="#6b5a3e" font-family="IBM Plex Sans" font-weight="600">Энтероцит</text>
+                </g>
+
+                <!-- Goblet cell -->
+                <g class="enterocyte-group">
+                  <path d="M365,260 C365,190 360,130 378,92 C396,92 391,130 391,190 C391,260 365,260 365,260Z" fill="#c8e8c8" stroke="#5a8a5a" stroke-width="1.2"/>
+                  <ellipse cx="378" cy="160" rx="13" ry="24" fill="#a0d8a0" opacity="0.45"/>
+                  <text x="378" y="274" text-anchor="middle" font-size="11" fill="#4a7a4a" font-family="IBM Plex Sans" font-weight="600">Бокаловид.</text>
+                </g>
+
+                <!-- Enterocyte C -->
+                <g class="enterocyte-group">
+                  <rect x="410" y="90" width="120" height="170" rx="6" fill="url(#cellGrad)" stroke="#8b7355" stroke-width="1.5"/>
+                  <ellipse cx="470" cy="220" rx="22" ry="18" fill="url(#nucGrad)" stroke="#7b5ea7" stroke-width="1" opacity="0.8"/>
+                  <text x="470" y="118" text-anchor="middle" font-size="13" fill="#6b5a3e" font-family="IBM Plex Sans" font-weight="600">Энтероцит</text>
+                </g>
+
+                <!-- Ciliated cell -->
+                <g class="enterocyte-group">
+                  <rect x="540" y="90" width="100" height="170" rx="6" fill="#d0e0f0" stroke="#5a7a9e" stroke-width="1.2"/>
+                  <ellipse cx="590" cy="220" rx="18" ry="15" fill="#b0c8e0" stroke="#5a7a9e" stroke-width="1" opacity="0.7"/>
+                  <text x="590" y="118" text-anchor="middle" font-size="12" fill="#4a6a8e" font-family="IBM Plex Sans" font-weight="600">Ресничная</text>
+                  <g opacity="0.65" stroke="#5a7a9e" stroke-width="1.5">
+                    <line x1="555" y1="90" x2="553" y2="76"/><line x1="568" y1="90" x2="566" y2="75"/>
+                    <line x1="581" y1="90" x2="580" y2="76"/><line x1="594" y1="90" x2="595" y2="75"/>
+                    <line x1="607" y1="90" x2="609" y2="76"/><line x1="620" y1="90" x2="623" y2="77"/>
+                  </g>
+                </g>
+
+                <!-- Enterocyte D -->
+                <g class="enterocyte-group">
+                  <rect x="650" y="90" width="120" height="170" rx="6" fill="url(#cellGrad)" stroke="#8b7355" stroke-width="1.5"/>
+                  <ellipse cx="710" cy="220" rx="22" ry="18" fill="url(#nucGrad)" stroke="#7b5ea7" stroke-width="1" opacity="0.8"/>
+                  <text x="710" y="118" text-anchor="middle" font-size="13" fill="#6b5a3e" font-family="IBM Plex Sans" font-weight="600">Энтероцит</text>
+                </g>
+
+                <!-- Half enterocyte E -->
+                <g class="enterocyte-group">
+                  <rect x="780" y="90" width="80" height="170" rx="6" fill="url(#cellGrad)" stroke="#8b7355" stroke-width="1.5"/>
+                  <ellipse cx="820" cy="220" rx="18" ry="15" fill="url(#nucGrad)" stroke="#7b5ea7" stroke-width="1" opacity="0.6"/>
+                </g>
+              </g>
+
+              <!-- ═══ BASEMENT MEMBRANE ═══ -->
+              <g class="zone zone-bm">
+                <line x1="80" y1="270" x2="870" y2="270" stroke="#8b7355" stroke-width="2.5" stroke-dasharray="10,5"/>
+                <text x="880" y="268" font-size="11" fill="#8b7355" font-family="IBM Plex Sans" font-style="italic" text-anchor="start">базальная</text>
+                <text x="880" y="282" font-size="11" fill="#8b7355" font-family="IBM Plex Sans" font-style="italic" text-anchor="start">мембрана</text>
+                <!-- step 3 arrows: amoebocyte migrating through BM -->
+                <path d="M475,295 L475,272" fill="none" stroke="#7b5ea7" stroke-width="3.5" marker-end="url(#arrPurple)" stroke-dasharray="6,4" opacity="0" class="sarr sarr-3"/>
+                <path d="M440,310 C435,295 440,280 445,270" fill="none" stroke="#7b5ea7" stroke-width="2.5" marker-end="url(#arrPurple)" stroke-dasharray="5,3" opacity="0" class="sarr sarr-3"/>
+              </g>
+
+              <!-- ═══ ZONE 3: COELOM ═══ -->
+              <g class="zone zone-coelom">
+                <rect x="80" y="295" width="860" height="130" rx="10" fill="url(#coelGrad)" stroke="#c4a880" stroke-width="1" stroke-dasharray="6,3"/>
+
+                <!-- Amoebocyte (main) -->
+                <g class="amoebocyte-group">
+                  <path d="M420,330 C450,305 510,300 530,330 C550,360 530,400 490,408 C450,416 415,395 418,362 C419,352 420,342 420,330Z" fill="url(#amoebGrad)" stroke="#a67c52" stroke-width="2.5" class="coel-phago"/>
+                  <!-- pseudopods -->
+                  <path d="M420,330 C408,320 395,318 388,325" fill="none" stroke="#a67c52" stroke-width="1.8" opacity="0.6" class="pseudopod"/>
+                  <path d="M530,330 C540,322 548,320 555,326" fill="none" stroke="#a67c52" stroke-width="1.8" opacity="0.6" class="pseudopod"/>
+                  <!-- nucleus -->
+                  <ellipse cx="472" cy="365" rx="24" ry="20" fill="url(#nucGrad)" stroke="#7b5ea7" stroke-width="1.2" opacity="0.8"/>
+                  <circle cx="466" cy="358" r="8" fill="#5a3d7a" opacity="0.35"/>
+                  <!-- phagocytosed particle -->
+                  <circle cx="500" cy="345" r="11" fill="#c4a060" stroke="#8b7355" stroke-width="1.2" opacity="0.15" class="coel-particle"/>
+                  <!-- phagosome membrane -->
+                  <circle cx="500" cy="345" r="16" fill="none" stroke="#8b7355" stroke-width="1" stroke-dasharray="3,2" opacity="0" class="phagosome-ring"/>
+                  <!-- lysosome -->
+                  <circle cx="448" cy="388" r="14" fill="#f0a0a0" stroke="#c06060" stroke-width="1.5" opacity="0.5" class="coel-lyso"/>
+                  <text x="448" y="392" text-anchor="middle" font-size="9" fill="#904040" font-family="IBM Plex Sans" font-weight="600" class="lyso-label" opacity="0.4">лизосома</text>
+                  <!-- fusion halo -->
+                  <circle cx="475" cy="365" r="30" fill="none" stroke="#d95b5b" stroke-width="0" opacity="0" class="fusion-halo"/>
+                  <!-- step 4 arrow: lysosome → phagosome -->
+                  <path d="M455,380 L480,360" fill="none" stroke="#c06060" stroke-width="3.5" marker-end="url(#arrRed)" opacity="0" class="sarr sarr-4"/>
+                </g>
+                <!-- label -->
+                <text x="475" y="430" text-anchor="middle" font-size="14" fill="#6b5030" font-family="IBM Plex Sans" font-weight="700">Амёбоцит (целомоцит)</text>
+
+                <!-- Second amoebocyte (smaller) -->
+                <path d="M750,340 C770,325 800,322 812,340 C824,358 812,380 795,385 C778,390 745,375 748,358Z" fill="#ffecd2" stroke="#a67c52" stroke-width="1.5" opacity="0.5"/>
+                <ellipse cx="780" cy="358" rx="14" ry="12" fill="#c8b4e0" opacity="0.4"/>
+              </g>
+
+              <!-- ═══ SPOTLIGHT OVERLAY (dims inactive zones) ═══ -->
+              <rect x="0" y="0" width="960" height="85" rx="0" fill="#f4efe5" opacity="0" class="dim dim-lumen"/>
+              <rect x="0" y="85" width="960" height="185" rx="0" fill="#f4efe5" opacity="0" class="dim dim-epi"/>
+              <rect x="0" y="270" width="960" height="170" rx="0" fill="#f4efe5" opacity="0" class="dim dim-coelom"/>
+            </svg>
+            <div id="step-detail" class="step-detail-box" data-active-step="1">
+              <p>Через кишечник проходит огромная масса минерального субстрата с тонким пищевым компонентом &mdash; бактерии, диатомеи, органический детрит.</p>
+            </div>
+            <div class="step-hint">&rarr; для следующего шага &bull; или нажмите кнопки выше</div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ══════ SLIDE 4: LUMEN ERA (1987-1997) ══════ -->
+      <section id="timeline-lumen" data-background-color="#0b1a2e">
+        <div class="slide-inner era-slide">
+          <div class="era-visual">
+            <svg viewBox="0 0 440 520" class="era-svg" aria-label="Внеклеточное пищеварение">
+              <!-- gut tube -->
+              <rect x="60" y="20" width="320" height="480" rx="40" fill="none" stroke="#4a6a8a" stroke-width="2.5"/>
+              <rect x="100" y="40" width="240" height="440" rx="28" fill="#1a2a3e"/>
+              <!-- lumen label -->
+              <text x="220" y="80" text-anchor="middle" font-size="14" fill="#7a9ab8" font-family="IBM Plex Sans" font-weight="600">ПРОСВЕТ</text>
+              <!-- food particles entering -->
+              <circle cx="220" cy="110" r="10" fill="#c4a060" opacity="0.8"/>
+              <circle cx="180" cy="125" r="7" fill="#b8946a" opacity="0.6"/>
+              <circle cx="260" cy="118" r="8" fill="#d4b078" opacity="0.7"/>
+              <circle cx="200" cy="145" r="6" fill="#a88850" opacity="0.5"/>
+              <!-- PFR label (1987) -->
+              <g class="fragment" data-fragment-index="0">
+                <text x="400" y="260" text-anchor="middle" font-size="11" fill="#4a90d9" font-family="IBM Plex Sans" font-weight="600" transform="rotate(90,400,260)">PFR &mdash; plug-flow reactor</text>
+                <path d="M375,80 L375,440" stroke="#4a90d9" stroke-width="1.5" stroke-dasharray="6,4" opacity="0.4"/>
+              </g>
+              <!-- enzyme symbols (1992) -->
+              <g class="fragment" data-fragment-index="1">
+                <text x="220" y="200" text-anchor="middle" font-size="22" fill="#8a6ad9" font-family="IBM Plex Serif" font-weight="700">5 протеаз</text>
+                <path d="M150,210 L290,210" stroke="#8a6ad9" stroke-width="1.5" stroke-dasharray="4,3"/>
+                <!-- scissors icons for enzymes -->
+                <text x="160" y="235" font-size="16" fill="#b09ae8" opacity="0.7">&#9986;</text>
+                <text x="200" y="240" font-size="16" fill="#b09ae8" opacity="0.6">&#9986;</text>
+                <text x="240" y="232" font-size="16" fill="#b09ae8" opacity="0.8">&#9986;</text>
+                <text x="275" y="238" font-size="16" fill="#b09ae8" opacity="0.6">&#9986;</text>
+              </g>
+              <!-- broken-down particles (1992) -->
+              <g class="fragment" data-fragment-index="1">
+                <circle cx="170" cy="270" r="3" fill="#c4a060" opacity="0.5"/>
+                <circle cx="195" cy="265" r="2.5" fill="#b8946a" opacity="0.4"/>
+                <circle cx="220" cy="275" r="3" fill="#d4b078" opacity="0.5"/>
+                <circle cx="245" cy="268" r="2" fill="#c4a060" opacity="0.4"/>
+                <circle cx="265" cy="278" r="3" fill="#a88850" opacity="0.5"/>
+              </g>
+              <!-- surfactant layer (1997) -->
+              <g class="fragment" data-fragment-index="2">
+                <text x="220" y="320" text-anchor="middle" font-size="16" fill="#2a9a6a" font-family="IBM Plex Sans" font-weight="700">сурфактанты</text>
+                <!-- wavy surfactant line -->
+                <path d="M130,340 C150,330 170,350 190,340 C210,330 230,350 250,340 C270,330 290,350 310,340" fill="none" stroke="#5ac89a" stroke-width="2"/>
+                <!-- DOM arrows to membrane -->
+                <path d="M160,350 L125,380" stroke="#5ac89a" stroke-width="1.5" stroke-dasharray="3,2"/>
+                <path d="M220,350 L220,380" stroke="#5ac89a" stroke-width="1.5" stroke-dasharray="3,2"/>
+                <path d="M280,350 L295,380" stroke="#5ac89a" stroke-width="1.5" stroke-dasharray="3,2"/>
+                <text x="220" y="370" text-anchor="middle" font-size="11" fill="#4aaa80" font-family="IBM Plex Sans">DOM</text>
+              </g>
+              <!-- epithelial wall with absorption -->
+              <rect x="100" y="385" width="240" height="12" rx="3" fill="#e8dcc8" opacity="0.3"/>
+              <text x="220" y="415" text-anchor="middle" font-size="10" fill="#8b7355" font-family="IBM Plex Sans">эпителий</text>
+            </svg>
+          </div>
+          <div class="era-content">
+            <h2>От морфологии к химии просвета</h2>
+            <p class="era-range">1987 &mdash; 1997</p>
+            <div class="era-milestones">
+              <div class="era-ms fragment" data-fragment-index="0">
+                <span class="era-ms-yr" style="background:#4a90d9">1987</span>
+                <div>
+                  <strong>Реакторная модель</strong>
+                  <p>Penry &amp; Jumars: кишечник = plug-flow reactor. Эффективность зависит от времени транзита.</p>
+                </div>
+              </div>
+              <div class="era-ms fragment" data-fragment-index="1">
+                <span class="era-ms-yr" style="background:#8a6ad9">1992</span>
+                <div>
+                  <strong>5 сериновых протеаз</strong>
+                  <p>Eberhardt: внеклеточный протеолиз прямо в химусе, до контакта с эпителием.</p>
+                </div>
+              </div>
+              <div class="era-ms fragment" data-fragment-index="2">
+                <span class="era-ms-yr" style="background:#2a9a6a">1997</span>
+                <div>
+                  <strong>Сурфактанты и DOM</strong>
+                  <p>Mayer: органика десорбируется в раствор, абсорбция без фагоцитоза.</p>
+                </div>
+              </div>
+              <div class="era-ms era-ms-q fragment" data-fragment-index="3">
+                <div>
+                  <strong style="color:var(--gold)">Вывод:</strong>
+                  <p style="color:var(--gold)">Если пищеварение идёт в просвете &mdash; зачем нужен внутриклеточный этап?</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ══════ SLIDE 5: IMMUNITY ERA (2004-2023) ══════ -->
+      <section id="timeline-immunity" data-background-color="#0b1a2e">
+        <div class="slide-inner era-slide">
+          <div class="era-visual">
+            <svg viewBox="0 0 440 520" class="era-svg" aria-label="Целомоцит с иммунным арсеналом">
+              <!-- large amoebocyte -->
+              <path d="M220,60 C310,55 400,130 410,230 C420,330 370,420 290,455 C210,490 120,470 70,400 C20,330 30,220 70,150 C110,80 130,65 220,60Z" fill="#ffecd2" opacity="0.15" stroke="#a67c52" stroke-width="2"/>
+              <!-- nucleus -->
+              <ellipse cx="200" cy="240" rx="60" ry="50" fill="#c8b4e0" opacity="0.2" stroke="#7b5ea7" stroke-width="1.5"/>
+              <circle cx="190" cy="230" r="16" fill="#5a3d7a" opacity="0.2"/>
+              <!-- AMP molecules radiating out -->
+              <g class="fragment" data-fragment-index="0">
+                <circle cx="350" cy="180" r="8" fill="#d97a4a" opacity="0.8"/>
+                <text x="370" y="175" font-size="10" fill="#e8a87c" font-family="IBM Plex Sans" font-weight="700">AMP</text>
+                <circle cx="360" cy="300" r="8" fill="#d97a4a" opacity="0.7"/>
+                <text x="380" y="295" font-size="10" fill="#e8a87c" font-family="IBM Plex Sans" font-weight="700">AMP</text>
+                <circle cx="130" cy="150" r="8" fill="#d97a4a" opacity="0.6"/>
+                <text x="95" y="148" font-size="10" fill="#e8a87c" font-family="IBM Plex Sans" font-weight="700">AMP</text>
+                <circle cx="300" cy="400" r="8" fill="#d97a4a" opacity="0.7"/>
+                <text x="315" y="395" font-size="10" fill="#e8a87c" font-family="IBM Plex Sans" font-weight="700">AMP</text>
+                <!-- arenicin label -->
+                <text x="220" y="130" text-anchor="middle" font-size="18" fill="#d97a4a" font-family="IBM Plex Serif" font-weight="700">Arenicin-1, -2</text>
+              </g>
+              <!-- TLR receptors on membrane -->
+              <g class="fragment" data-fragment-index="1">
+                <g transform="translate(80,280)">
+                  <rect x="-4" y="-20" width="8" height="20" rx="3" fill="#d94a6a" opacity="0.7"/>
+                  <circle cx="0" cy="-24" r="6" fill="#d94a6a" opacity="0.8"/>
+                  <text x="12" y="-10" font-size="9" fill="#e87a9a" font-family="IBM Plex Sans">TLR</text>
+                </g>
+                <g transform="translate(120,370)">
+                  <rect x="-4" y="-20" width="8" height="20" rx="3" fill="#d94a6a" opacity="0.7"/>
+                  <circle cx="0" cy="-24" r="6" fill="#d94a6a" opacity="0.8"/>
+                  <text x="12" y="-10" font-size="9" fill="#e87a9a" font-family="IBM Plex Sans">TLR</text>
+                </g>
+                <g transform="translate(310,350)">
+                  <rect x="-4" y="-20" width="8" height="20" rx="3" fill="#d94a6a" opacity="0.7"/>
+                  <circle cx="0" cy="-24" r="6" fill="#d94a6a" opacity="0.8"/>
+                  <text x="12" y="-10" font-size="9" fill="#e87a9a" font-family="IBM Plex Sans">TLR</text>
+                </g>
+                <!-- count -->
+                <text x="220" y="480" text-anchor="middle" font-size="13" fill="#e87a9a" font-family="IBM Plex Sans" font-weight="600">18 TLR &bull; 6 TEP &bull; MASP</text>
+              </g>
+              <!-- phagocytosed bacterium (not food!) -->
+              <g class="fragment" data-fragment-index="0">
+                <ellipse cx="280" cy="250" rx="14" ry="8" fill="#88cc88" opacity="0.5" stroke="#5a8a5a" stroke-width="1"/>
+                <text x="280" y="272" text-anchor="middle" font-size="8" fill="#5a8a5a" font-family="IBM Plex Sans">бактерия</text>
+              </g>
+            </svg>
+          </div>
+          <div class="era-content">
+            <h2>От пищеварения к иммунитету</h2>
+            <p class="era-range">2004 &mdash; 2023</p>
+            <div class="era-milestones">
+              <div class="era-ms fragment" data-fragment-index="0">
+                <span class="era-ms-yr" style="background:#d97a4a">2004</span>
+                <div>
+                  <strong>Ареницины (AMPs)</strong>
+                  <p>Овчинникова: Arenicin-1, -2 в целомоцитах. Мощные антимикробные пептиды. Maltseva (2014): иммунолокализация.</p>
+                </div>
+              </div>
+              <div class="era-ms fragment" data-fragment-index="1">
+                <span class="era-ms-yr" style="background:#d94a6a">2023</span>
+                <div>
+                  <strong>Транскриптом целомоцитов</strong>
+                  <p>Stanovova: 18 TLR, 6 TEP, MASP-like протеаза, complement-каскад. Полный иммунный арсенал.</p>
+                </div>
+              </div>
+              <div class="era-ms era-ms-q fragment" data-fragment-index="1">
+                <div>
+                  <strong style="color:var(--gold)">Итог:</strong>
+                  <p style="color:var(--gold)">Целомоциты &mdash; иммунные клетки, не пищеварительные. Кто тогда переваривает внутриклеточно?</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ══════ SLIDE 5: PARADIGM SHIFT ══════ -->
+      <section id="shift" data-background-color="#f4efe5">
+        <div class="slide-inner shift-layout">
+          <h2 class="dark-text">Смена парадигмы</h2>
+          <p class="shift-sub dark-text">Целомоциты: от модели внутриклеточного пищеварения к врождённому иммунитету</p>
+          <div class="shift-content">
+            <div class="shift-card-pair">
+              <div class="era-card era-old">
+                <span class="era-label">До 2004</span>
+                <h3>Пищеварительная функция</h3>
+                <p>Амёбоциты фагоцитируют пищевые частицы из эпителия и переваривают их в фаголизосомах. Основная гипотеза &mdash; трофическая роль.</p>
+                <div class="era-source">Kermack 1955; Kaganovskaya 1976-1989</div>
+              </div>
+              <div class="era-arrow">
+                <svg viewBox="0 0 100 50" class="arrow-svg" aria-hidden="true"><path d="M8,25 L75,25" stroke="#8b7355" stroke-width="3" fill="none"/><path d="M68,14 L85,25 L68,36" stroke="#8b7355" stroke-width="3" fill="none"/></svg>
+              </div>
+              <div class="era-card era-new">
+                <span class="era-label era-label-new">2004-2023</span>
+                <h3>Иммунная функция</h3>
+                <p>Те же клетки экспрессируют антимикробные пептиды (Arenicin-1, -2), 18 TLR-рецепторов, TEP, MASP-like протеазу. Фагоцитоз &mdash; часть врождённого иммунитета.</p>
+                <div class="era-source">Ovchinnikova 2004; Maltseva 2014; Stanovova 2023</div>
+              </div>
+            </div>
+            <div class="shift-photos shift-photos-3">
+              <figure class="shift-fig">
+                <img src="assets/maltseva-2014-coelomocytes.jpg" alt="Иммуноцитохимия целомоцитов">
+                <figcaption>Ареницин в целомоцитах. <em>Maltseva 2014</em></figcaption>
+              </figure>
+              <figure class="shift-fig">
+                <img src="assets/maltseva-2014-intestine.jpg" alt="Кишечный эпителий">
+                <figcaption>Arenicin в кишечном эпителии. <em>Maltseva 2014</em></figcaption>
+              </figure>
+              <figure class="shift-fig">
+                <img src="assets/figure-bodywall-arenicin-2014.jpg" alt="Стенка тела">
+                <figcaption>Стенка тела и экстравазальная ткань. <em>Maltseva 2014</em></figcaption>
+              </figure>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ══════ SLIDE 6: FRONTIER ══════ -->
+      <section id="frontier" data-background-color="#0b1a2e">
+        <div class="slide-inner frontier-layout">
+          <h2>Состояние вопроса</h2>
+          <p class="frontier-sub">По целомоцитам поле ушло вперёд. По энтероцитам &mdash; пробел с 1989 года.</p>
+          <div class="frontier-evidence">
+            <figure class="frontier-fig">
+              <img src="assets/figure-arenicin-western-2014.jpg" alt="Western blot arenicin">
+              <figcaption>Белковый <span lang="en">readout</span> <em>Maltseva 2014</em></figcaption>
+            </figure>
+            <figure class="frontier-fig">
+              <img src="assets/figure-arenicin-pcr-2014.jpg" alt="RT-PCR arenicin">
+              <figcaption><span lang="en">RT-PCR</span> <em>Maltseva 2014</em></figcaption>
+            </figure>
+            <figure class="frontier-fig">
+              <img src="assets/figure-bodywall-arenicin-2014.jpg" alt="Body wall arenicin">
+              <figcaption>Стенка тела <em>Maltseva 2014</em></figcaption>
+            </figure>
+          </div>
+          <div class="frontier-grid">
+            <div class="frontier-col frontier-known">
+              <h3>Доказано</h3>
+              <ul>
+                <li>Arenicin-1 / Arenicin-2 (AMPs) в целомоцитах</li>
+                <li>18 TLR, 6 TEP, MASP-like протеаза</li>
+                <li>Фаголизосомная активность целомоцитов</li>
+                <li>Транскриптомный портрет (scRNA-seq)</li>
+                <li>Просветный гидролиз: 5 протеаз, DOM, сурфактанты</li>
+              </ul>
+            </div>
+            <div class="frontier-col frontier-gap">
+              <h3>Не доказано</h3>
+              <ul>
+                <li>Внутриклеточное пищеварение в энтероцитах</li>
+                <li>Маркеры endosome-lysosome пути</li>
+                <li>Профиль катепсинов кишечной стенки</li>
+                <li>Single-cell транскриптомика кишечника</li>
+                <li>Количественный вклад клетки в пищеварение</li>
+              </ul>
+            </div>
+            <div class="frontier-col frontier-tools">
+              <h3>Методы 2026</h3>
+              <ul>
+                <li><strong lang="en">Spatial transcriptomics</strong> &mdash; карта клеток кишечной стенки</li>
+                <li><strong lang="en">Confocal co-localization</strong> &mdash; <span lang="en">uptake</span> + эндосомы + лизосомы</li>
+                <li><strong lang="en">Lysosomal proteomics</strong> &mdash; панель ферментов</li>
+                <li><strong lang="en">Tracer uptake assay</strong> &mdash; путь частицы от просвета в клетку</li>
+                <li><strong lang="en">Cryo-ET</strong> &mdash; ультраструктура без артефактов</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ══════ SLIDE 7: CLOSING ══════ -->
+      <section id="closing" data-background-color="#0b1a2e">
+        <div class="slide-inner closing-layout">
+          <div class="close-top">
+            <div class="close-portrait">
+              <img src="assets/ella-kaganovsky-centered.jpg" alt="Е.А. Кагановская">
+              <p class="close-portrait-name">Элла Абрамовна Кагановская</p>
+              <p class="close-portrait-role">к.б.н., кафедра цитологии и гистологии<br>Ленинградский государственный университет</p>
+            </div>
+            <div class="close-text">
+              <div class="close-lines">
+                <p class="cl cl-1">Вопрос открыт.</p>
+                <p class="cl cl-2">Инструменты готовы.</p>
+                <p class="cl cl-3">Нужен исследователь.</p>
+              </div>
+              <div class="close-dedication">
+                <p>Мама, спасибо, что показала мне, как красив мир под микроскопом.<br>С любовью, твой сын.</p>
+              </div>
+            </div>
+          </div>
+          <div class="close-photos">
+            <figure class="close-fig">
+              <img src="assets/twelve-colleges-entrance.jpg" alt="Здание Двенадцати коллегий — вход">
+            </figure>
+            <figure class="close-fig">
+              <img src="assets/twelve-colleges-neva.jpg" alt="Вид с Невы">
+            </figure>
+            <figure class="close-fig">
+              <img src="assets/twelve-colleges-winter.jpg" alt="Менделеевская линия зимой">
+            </figure>
+            <figure class="close-fig">
+              <img src="assets/twelve-colleges-corridor.jpg" alt="Знаменитый коридор">
+            </figure>
+          </div>
+        </div>
+      </section>
+
+    </div>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/reveal.js@5.1.0/dist/reveal.js"></script>
+  <script src="main.js?v=20260315m"></script>
+</body>
+</html>

@@ -1,0 +1,26 @@
+# Dev files
+.claude/
+node_modules/
+*.log
+
+# Debug screenshots
+*.png
+!slides/assets/*.png
+
+# Dev scripts
+slides/serve_slides.py
+slides/RUN_AND_QA.md
+
+# Large originals
+IMG_1854.jpg
+
+# Windows scripts
+*.cmd
+*.vbs
+
+# Working docs
+*.md
+!slides/**
+
+# Keep only presentation
+!.gitignore
