@@ -9,7 +9,7 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;500;600;700&family=IBM+Plex+Serif:wght@400;500;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reveal.js@5.1.0/dist/reveal.css">
-  <link rel="stylesheet" href="style.css?v=20260315m">
+  <link rel="stylesheet" href="style.css?v=20260317f">
 </head>
 <body>
   <div class="reveal">
@@ -361,53 +361,49 @@
       <!-- ══════ SLIDE 4: LUMEN ERA (1987-1997) ══════ -->
       <section id="timeline-lumen" data-background-color="#0b1a2e">
         <div class="slide-inner era-slide">
-          <div class="era-visual">
-            <svg viewBox="0 0 440 520" class="era-svg" aria-label="Внеклеточное пищеварение">
+          <div class="era-visual" id="era-visual-lumen">
+            <div class="era-left-detail" id="era-left-detail" hidden></div>
+            <svg viewBox="0 0 440 520" class="era-svg" id="era-svg-lumen" aria-label="Внеклеточное пищеварение">
               <!-- gut tube -->
               <rect x="60" y="20" width="320" height="480" rx="40" fill="none" stroke="#4a6a8a" stroke-width="2.5"/>
               <rect x="100" y="40" width="240" height="440" rx="28" fill="#1a2a3e"/>
-              <!-- lumen label -->
               <text x="220" y="80" text-anchor="middle" font-size="14" fill="#7a9ab8" font-family="IBM Plex Sans" font-weight="600">ПРОСВЕТ</text>
-              <!-- food particles entering -->
+              <!-- food particles -->
               <circle cx="220" cy="110" r="10" fill="#c4a060" opacity="0.8"/>
               <circle cx="180" cy="125" r="7" fill="#b8946a" opacity="0.6"/>
               <circle cx="260" cy="118" r="8" fill="#d4b078" opacity="0.7"/>
               <circle cx="200" cy="145" r="6" fill="#a88850" opacity="0.5"/>
-              <!-- PFR label (1987) -->
-              <g class="fragment" data-fragment-index="0">
-                <text x="400" y="260" text-anchor="middle" font-size="11" fill="#4a90d9" font-family="IBM Plex Sans" font-weight="600" transform="rotate(90,400,260)">PFR &mdash; plug-flow reactor</text>
+              <!-- PFR (1987) -->
+              <g class="era-svg-zone" data-era-idx="0">
+                <text x="400" y="260" text-anchor="middle" font-size="11" fill="#4a90d9" font-family="IBM Plex Sans" font-weight="600" transform="rotate(90,400,260)">PFR — plug-flow reactor</text>
                 <path d="M375,80 L375,440" stroke="#4a90d9" stroke-width="1.5" stroke-dasharray="6,4" opacity="0.4"/>
               </g>
-              <!-- enzyme symbols (1992) -->
-              <g class="fragment" data-fragment-index="1">
-                <text x="220" y="200" text-anchor="middle" font-size="22" fill="#8a6ad9" font-family="IBM Plex Serif" font-weight="700">5 протеаз</text>
-                <path d="M150,210 L290,210" stroke="#8a6ad9" stroke-width="1.5" stroke-dasharray="4,3"/>
-                <!-- scissors icons for enzymes -->
-                <text x="160" y="235" font-size="16" fill="#b09ae8" opacity="0.7">&#9986;</text>
-                <text x="200" y="240" font-size="16" fill="#b09ae8" opacity="0.6">&#9986;</text>
-                <text x="240" y="232" font-size="16" fill="#b09ae8" opacity="0.8">&#9986;</text>
-                <text x="275" y="238" font-size="16" fill="#b09ae8" opacity="0.6">&#9986;</text>
+              <!-- enzymes (1992) -->
+              <g class="era-svg-zone" data-era-idx="1">
+                <text x="220" y="200" text-anchor="middle" font-size="22" fill="#d4a054" font-family="IBM Plex Serif" font-weight="700">5 протеаз</text>
+                <path d="M150,210 L290,210" stroke="#d4a054" stroke-width="1.5" stroke-dasharray="4,3"/>
+                <text x="160" y="235" font-size="16" fill="#e8c078" opacity="0.7">&#9986;</text>
+                <text x="200" y="240" font-size="16" fill="#e8c078" opacity="0.6">&#9986;</text>
+                <text x="240" y="232" font-size="16" fill="#e8c078" opacity="0.8">&#9986;</text>
+                <text x="275" y="238" font-size="16" fill="#e8c078" opacity="0.6">&#9986;</text>
               </g>
-              <!-- broken-down particles (1992) -->
-              <g class="fragment" data-fragment-index="1">
+              <g class="era-svg-zone" data-era-idx="1">
                 <circle cx="170" cy="270" r="3" fill="#c4a060" opacity="0.5"/>
                 <circle cx="195" cy="265" r="2.5" fill="#b8946a" opacity="0.4"/>
                 <circle cx="220" cy="275" r="3" fill="#d4b078" opacity="0.5"/>
                 <circle cx="245" cy="268" r="2" fill="#c4a060" opacity="0.4"/>
                 <circle cx="265" cy="278" r="3" fill="#a88850" opacity="0.5"/>
               </g>
-              <!-- surfactant layer (1997) -->
-              <g class="fragment" data-fragment-index="2">
+              <!-- surfactants (1997) -->
+              <g class="era-svg-zone" data-era-idx="2">
                 <text x="220" y="320" text-anchor="middle" font-size="16" fill="#2a9a6a" font-family="IBM Plex Sans" font-weight="700">сурфактанты</text>
-                <!-- wavy surfactant line -->
                 <path d="M130,340 C150,330 170,350 190,340 C210,330 230,350 250,340 C270,330 290,350 310,340" fill="none" stroke="#5ac89a" stroke-width="2"/>
-                <!-- DOM arrows to membrane -->
                 <path d="M160,350 L125,380" stroke="#5ac89a" stroke-width="1.5" stroke-dasharray="3,2"/>
                 <path d="M220,350 L220,380" stroke="#5ac89a" stroke-width="1.5" stroke-dasharray="3,2"/>
                 <path d="M280,350 L295,380" stroke="#5ac89a" stroke-width="1.5" stroke-dasharray="3,2"/>
                 <text x="220" y="370" text-anchor="middle" font-size="11" fill="#4aaa80" font-family="IBM Plex Sans">DOM</text>
               </g>
-              <!-- epithelial wall with absorption -->
+              <!-- epithelium -->
               <rect x="100" y="385" width="240" height="12" rx="3" fill="#e8dcc8" opacity="0.3"/>
               <text x="220" y="415" text-anchor="middle" font-size="10" fill="#8b7355" font-family="IBM Plex Sans">эпителий</text>
             </svg>
@@ -416,28 +412,44 @@
             <h2>От морфологии к химии просвета</h2>
             <p class="era-range">1987 &mdash; 1997</p>
             <div class="era-milestones">
-              <div class="era-ms fragment" data-fragment-index="0">
-                <span class="era-ms-yr" style="background:#4a90d9">1987</span>
-                <div>
-                  <strong>Реакторная модель</strong>
-                  <p>Penry &amp; Jumars: кишечник = plug-flow reactor. Эффективность зависит от времени транзита.</p>
+              <!-- Hidden fragment triggers for arrow-key navigation -->
+              <span class="fragment era-frag" data-fragment-index="0" data-era-idx="0"></span>
+              <span class="fragment era-frag" data-fragment-index="1" data-era-idx="1"></span>
+              <span class="fragment era-frag" data-fragment-index="2" data-era-idx="2"></span>
+              <div class="era-ms era-ms-clickable era-stagger" style="--stagger:0" data-era-idx="0">
+                <div class="era-ms-header">
+                  <span class="era-ms-yr" style="background:#4a90d9">1987</span>
+                  <div>
+                    <strong>Реакторная модель</strong>
+                    <cite class="era-ms-cite">Penry D.L. &amp; Jumars P.A. &mdash; <em>Am. Nat.</em> 129(1): 69&ndash;96</cite>
+                    <p>Кишечник = plug-flow reactor. Эффективность зависит от времени транзита.</p>
+                  </div>
+                  <span class="era-ms-toggle">подробнее &rarr;</span>
                 </div>
               </div>
-              <div class="era-ms fragment" data-fragment-index="1">
-                <span class="era-ms-yr" style="background:#8a6ad9">1992</span>
-                <div>
-                  <strong>5 сериновых протеаз</strong>
-                  <p>Eberhardt: внеклеточный протеолиз прямо в химусе, до контакта с эпителием.</p>
+              <div class="era-ms era-ms-clickable era-stagger" style="--stagger:1" data-era-idx="1">
+                <div class="era-ms-header">
+                  <span class="era-ms-yr" style="background:#d4a054">1992</span>
+                  <div>
+                    <strong>5 сериновых протеаз</strong>
+                    <cite class="era-ms-cite">Eberhardt J. &mdash; <em>J. Comp. Physiol. B</em> 162: 159&ndash;167</cite>
+                    <p>Внеклеточный протеолиз прямо в химусе, до контакта с эпителием.</p>
+                  </div>
+                  <span class="era-ms-toggle">подробнее &rarr;</span>
                 </div>
               </div>
-              <div class="era-ms fragment" data-fragment-index="2">
-                <span class="era-ms-yr" style="background:#2a9a6a">1997</span>
-                <div>
-                  <strong>Сурфактанты и DOM</strong>
-                  <p>Mayer: органика десорбируется в раствор, абсорбция без фагоцитоза.</p>
+              <div class="era-ms era-ms-clickable era-stagger" style="--stagger:2" data-era-idx="2">
+                <div class="era-ms-header">
+                  <span class="era-ms-yr" style="background:#2a9a6a">1997</span>
+                  <div>
+                    <strong>Сурфактанты и DOM</strong>
+                    <cite class="era-ms-cite">Mayer L.M. et al. &mdash; <em>J. Mar. Res.</em> 55: 785&ndash;812</cite>
+                    <p>Органика десорбируется в раствор, абсорбция без фагоцитоза.</p>
+                  </div>
+                  <span class="era-ms-toggle">подробнее &rarr;</span>
                 </div>
               </div>
-              <div class="era-ms era-ms-q fragment" data-fragment-index="3">
+              <div class="era-ms era-ms-q era-stagger" style="--stagger:3">
                 <div>
                   <strong style="color:var(--gold)">Вывод:</strong>
                   <p style="color:var(--gold)">Если пищеварение идёт в просвете &mdash; зачем нужен внутриклеточный этап?</p>
@@ -662,7 +674,31 @@
     </div>
   </div>
 
+  <!-- Bottom overlay removed — detail now shows in left panel -->
+
+  <!-- Detail panel templates (hidden, cloned by JS) -->
+  <template id="era-detail-0">
+    <p class="era-detail-cite">Penry &amp; Jumars (1987) <em>Am. Nat.</em> 129(1): 69&ndash;96</p>
+    <img src="assets/era-1987-burrow.svg" alt="J-образная нора Arenicola marina" class="era-detail-img-full">
+    <p class="era-detail-text">Кишечник <em>A.&thinsp;marina</em> работает как проточный реактор (PFR): пища входит с одного конца и последовательно переваривается по мере продвижения. Слишком быстро&nbsp;&mdash; непереварена; слишком медленно&nbsp;&mdash; потеря пропускной способности.</p>
+    <figcaption class="era-fig-caption"><b>Рис.&thinsp;1.</b> J-образная нора. Кишечник = plug-flow reactor (PFR). <span class="era-fig-credit">CMG&nbsp;Lee, CC&nbsp;BY-SA</span></figcaption>
+  </template>
+
+  <template id="era-detail-1">
+    <p class="era-detail-cite">Eberhardt (1992) <em>J. Comp. Physiol. B</em> 162: 159&ndash;167</p>
+    <img src="assets/era-1992-protease.png" alt="Каталитическая триада Ser-His-Asp" class="era-detail-img-full">
+    <p class="era-detail-text">Пять сериновых протеаз (24.0&ndash;24.6&thinsp;кДа) выделены из кишечной жидкости: 3&times;трипсин, 1&times;химотрипсин, 1&times;эластаза. Белки расщепляются <strong>внеклеточно</strong>, прямо в просвете&nbsp;&mdash; до контакта с эпителием.</p>
+    <figcaption class="era-fig-caption"><b>Рис.&thinsp;2.</b> Каталитическая триада (Ser&ndash;His&ndash;Asp)&nbsp;&mdash; общий механизм всех пяти протеаз. <span class="era-fig-credit">Wikimedia, PD</span></figcaption>
+  </template>
+
+  <template id="era-detail-2">
+    <p class="era-detail-cite">Mayer et al. (1997) <em>J. Mar. Res.</em> 55: 785&ndash;812</p>
+    <img src="assets/era-1997-micelle.svg" alt="Мицелла — структура сурфактанта" class="era-detail-img-full">
+    <p class="era-detail-text">Кишечная жидкость содержит мощные сурфактанты, которые отрывают органику от минеральных частиц. Концентрация DOM поразительна: аминокислоты&nbsp;&gt;1&thinsp;М, липиды&nbsp;~1&thinsp;г/л&nbsp;&mdash; гораздо выше, чем в поровой воде осадка.</p>
+    <figcaption class="era-fig-caption"><b>Рис.&thinsp;3.</b> Строение мицеллы: гидрофильные головки наружу, гидрофобные хвосты внутрь. <span class="era-fig-credit">E.&nbsp;Boutet, CC&nbsp;BY-SA&nbsp;3.0</span></figcaption>
+  </template>
+
   <script src="https://cdn.jsdelivr.net/npm/reveal.js@5.1.0/dist/reveal.js"></script>
-  <script src="main.js?v=20260315m"></script>
+  <script src="main.js?v=20260317f"></script>
 </body>
 </html>

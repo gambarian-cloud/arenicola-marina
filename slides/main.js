@@ -24,6 +24,7 @@
     goToStep(1);
     setupPubReveal();
     setupResize();
+    setupEraInteractivity();
   });
 
   /* ═══════════════════ PUB AUTO-UNFOLD ═══════════════════ */
@@ -340,5 +341,114 @@
     });
   }
 
-  /* timeline uses Reveal.js vertical sub-slides — no custom handler needed */
+  /* ═══════════════════ ERA TIMELINE INTERACTIVITY ═══════════════════ */
+  function setupEraInteractivity() {
+    var eraColors = { "0": "#4a90d9", "1": "#d4a054", "2": "#2a9a6a" };
+    var svgEl = document.getElementById("era-svg-lumen");
+    var detailEl = document.getElementById("era-left-detail");
+    var activeIdx = null;
+
+    function showDetail(idx) {
+      var tpl = document.getElementById("era-detail-" + idx);
+      if (!tpl) return;
+      detailEl.innerHTML = "";
+      detailEl.appendChild(tpl.content.cloneNode(true));
+      var backBtn = document.createElement("button");
+      backBtn.className = "era-detail-back";
+      backBtn.textContent = "\u2190 назад";
+      backBtn.addEventListener("click", function () { clearAll(); });
+      detailEl.appendChild(backBtn);
+      svgEl.style.display = "none";
+      detailEl.style.display = "flex";
+      detailEl.style.borderColor = eraColors[idx] || "#4a90d9";
+      highlightCard(idx);
+      syncSvgHighlight(idx);
+      activeIdx = idx;
+    }
+
+    function hideDetail() {
+      detailEl.style.display = "none";
+      svgEl.style.display = "";
+    }
+
+    function highlightCard(idx) {
+      document.querySelectorAll(".era-ms-clickable").forEach(function (c) {
+        c.classList.remove("era-ms-active");
+        c.style.removeProperty("--era-color");
+      });
+      if (idx !== null) {
+        var card = document.querySelector('.era-ms-clickable[data-era-idx="' + idx + '"]');
+        if (card) {
+          card.classList.add("era-ms-active");
+          card.style.setProperty("--era-color", eraColors[idx] || "#4a90d9");
+        }
+      }
+    }
+
+    function clearAll() {
+      hideDetail();
+      highlightCard(null);
+      syncSvgHighlight(null);
+      activeIdx = null;
+    }
+
+    // Arrow-key navigation via Reveal.js fragments
+    deck.on("fragmentshown", function (ev) {
+      var frag = ev.fragment;
+      if (frag && frag.classList.contains("era-frag")) {
+        showDetail(frag.dataset.eraIdx);
+      }
+    });
+    deck.on("fragmenthidden", function (ev) {
+      var frag = ev.fragment;
+      if (frag && frag.classList.contains("era-frag")) {
+        // When going back, show previous detail or clear
+        var prevIdx = parseInt(frag.dataset.eraIdx, 10) - 1;
+        if (prevIdx >= 0) {
+          showDetail(String(prevIdx));
+        } else {
+          clearAll();
+        }
+      }
+    });
+
+    // Click on cards still works
+    document.addEventListener("click", function (e) {
+      if (e.target.closest(".era-left-detail")) return;
+      var card = e.target.closest(".era-ms-clickable");
+      if (!card) return;
+      e.stopImmediatePropagation();
+      e.preventDefault();
+      var idx = card.dataset.eraIdx;
+      if (activeIdx === idx) {
+        clearAll();
+      } else {
+        showDetail(idx);
+      }
+    }, true);
+
+    document.addEventListener("keydown", function (e) {
+      if (activeIdx !== null && e.key === "Escape") {
+        clearAll();
+        e.stopImmediatePropagation();
+        e.preventDefault();
+      }
+    }, true);
+
+    deck.on("slidechanged", function () { clearAll(); });
+  }
+
+  function syncSvgHighlight(activeIdx) {
+    var zones = document.querySelectorAll(".era-svg-zone");
+    zones.forEach(function (z) {
+      z.classList.remove("era-svg-dim", "era-svg-glow");
+      if (activeIdx !== null) {
+        if (z.dataset.eraIdx === activeIdx) {
+          z.classList.add("era-svg-glow");
+        } else {
+          z.classList.add("era-svg-dim");
+        }
+      }
+    });
+  }
 })();

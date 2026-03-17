@@ -24,3 +24,5 @@ IMG_1854.jpg
 
 # Keep only presentation
 !.gitignore
+
+.vercel
